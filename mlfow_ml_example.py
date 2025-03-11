@@ -17,8 +17,15 @@ import mlflow.sklearn
 
 import logging
 
+import dagshub
+dagshub.init(repo_owner='najmussakib', repo_name='mlflow-dvc-test', mlflow=True)
+
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
+
+# For remote server -> Dagshyb
+remote_server_uri = "https://dagshub.com/najmussakib/mlflow-dvc-test.mlflow"
+mlflow.set_tracking_uri(remote_server_uri)
 
 
 def eval_metrics(actual, pred):
