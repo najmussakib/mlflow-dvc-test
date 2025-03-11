@@ -1,0 +1,15 @@
+artifact_uri: file:///mnt/c/Users/N.Saqib/Projects/dl-projects/chest-classification/mlruns/0/4a8e94739b994ee3b04fed17133070bb/artifacts
+end_time: 1741691554218
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4a8e94739b994ee3b04fed17133070bb
+run_name: glamorous-shoat-519
+run_uuid: 4a8e94739b994ee3b04fed17133070bb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741691552170
+status: 4
+tags: []
+user_id: nsasqib
