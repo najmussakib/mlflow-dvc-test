@@ -5,26 +5,30 @@
 import os
 import warnings
 import sys
+import logging
+from urllib.parse import urlparse
+
+import mlflow
+import mlflow.sklearn
+import dagshub
 
 import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
-from urllib.parse import urlparse
-import mlflow
-import mlflow.sklearn
-
-import logging
-
-import dagshub
-dagshub.init(repo_owner='najmussakib', repo_name='mlflow-dvc-test', mlflow=True)
 
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
 
-# For remote server -> Dagshyb
-remote_server_uri = "https://dagshub.com/najmussakib/mlflow-dvc-test.mlflow"
+dagshub.init(repo_owner='najmussakib', repo_name='mlflow-dvc-test', mlflow=True)
+
+# For remote server -> Dagshub
+#remote_server_uri = "https://dagshub.com/najmussakib/mlflow-dvc-test.mlflow"
+
+# For remote AWS server
+remote_server_uri = "http://ec2-13-60-70-167.eu-north-1.compute.amazonaws.com:5000/"
+
 mlflow.set_tracking_uri(remote_server_uri)
 
 

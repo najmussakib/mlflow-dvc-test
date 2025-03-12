@@ -30,7 +30,7 @@ MLFLOW_TRACKING_USERNAME= \
 MLFLOW_TRACKING_PASSWORD= \
 
 
-Run this to export as env variables:
+Run this in the terminal to export as env variables:
 
 ```bash
 
@@ -41,3 +41,10 @@ export MLFLOW_TRACKING_USERNAME=
 export MLFLOW_TRACKING_PASSWORD=
 
 ```
+
+# AWS
+
+-  Set Mlflow in AWS:
+    - set s3 bucket for artifacts
+    - set EC2 instance for tracking server and install mlfow dependencies
+    - aws configure for cli access
